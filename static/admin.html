@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Tiny Titans Tech Academy</title>
+    
+    <link rel="icon" type="image/png" href="/images/shield_logo.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="background-color: var(--bg-light); min-height: 100vh;">
+
+    <!-- Login Panel -->
+    <div id="login-panel" class="admin-login-wrapper">
+        <div class="admissions-card">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <img src="/images/shield_logo.png" alt="Tiny Titans Shield" style="height: 60px; margin: 0 auto 1rem auto;">
+                <h3>Tiny Titans Admin Login</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Please enter dashboard credentials to manage leads.</p>
+            </div>
+            
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Log In</button>
+            </form>
+            <div id="loginMessage" class="form-message" style="margin-top: 1rem;"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard Panel (Hidden by default) -->
+    <div id="dashboard-panel" class="container" style="display: none; padding: 4rem 1.5rem;">
+        
+        <!-- Dashboard Header -->
+        <div class="admin-dashboard-header">
+            <div>
+                <h2>Tiny Titans Leads Portal</h2>
+                <p style="color: var(--text-muted);">Welcome, System Administrator</p>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <a href="/api/admin/leads/export" class="btn btn-secondary"><i class="fa-solid fa-file-csv"></i> Export CSV</a>
+                <button id="adminLogoutBtn" class="btn btn-outline"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            </div>
+        </div>
+        
+        <!-- Tab Controllers -->
+        <div class="admin-dashboard-tabs">
+            <button class="admin-tab-btn active" id="btn-leads-tab" onclick="switchAdminTab('leads-tab')">
+                <i class="fa-solid fa-list-check"></i> Admissions Leads
+            </button>
+            <button class="admin-tab-btn" id="btn-blog-tab" onclick="switchAdminTab('blog-tab')">
+                <i class="fa-solid fa-pen-to-square"></i> Publish Blog Post
+            </button>
+        </div>
+        
+        <!-- Dashboard Tab Content 1: Leads List -->
+        <div id="leads-tab" class="admin-tab-content">
+            <!-- Table Filters -->
+            <div class="admin-leads-filters">
+                <div class="filter-group">
+                    <button class="filter-btn active" onclick="loadLeads('all', this)">All Leads</button>
+                    <button class="filter-btn" onclick="loadLeads('New', this)">New</button>
+                    <button class="filter-btn" onclick="loadLeads('Contacted', this)">Contacted</button>
+                    <button class="filter-btn" onclick="loadLeads('Enrolled', this)">Enrolled</button>
+                    <button class="filter-btn" onclick="loadLeads('Archived', this)">Archived</button>
+                </div>
+                <div style="color: var(--text-muted); font-size: 0.9rem;">
+                    Total Records: <strong id="leads-count">0</strong>
+                </div>
+            </div>
+            
+            <!-- Leads Table -->
+            <div class="table-responsive">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Received At</th>
+                            <th>Student / Inst</th>
+                            <th>Parent Details</th>
+                            <th>Age</th>
+                            <th>Course Preference</th>
+                            <th>Batch Pref</th>
+                            <th>Status Badge</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leads-table-body">
+                        <!-- Leads injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Dashboard Tab Content 2: Publish Blog -->
+        <div id="blog-tab" class="admin-tab-content" style="display: none;">
+            <div class="admin-blog-form">
+                <h3 style="margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+                    <i class="fa-solid fa-feather-pointed" style="color: var(--secondary);"></i> Write a New Article
+                </h3>
+                
+                <form id="adminBlogForm">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="blogTitle">Article Title *</label>
+                            <input type="text" id="blogTitle" class="form-control" placeholder="e.g. Preparing for future jobs in 2026" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="blogCategory">Category / Division *</label>
+                            <select id="blogCategory" class="form-control" required>
+                                <option value="" disabled selected>Select Category</option>
+                                <option value="School Programs">School Programs</option>
+                                <option value="College Programs">College Programs</option>
+                                <option value="Technology Trends">Technology Trends</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="blogImage">Banner Image URL</label>
+                            <input type="text" id="blogImage" class="form-control" placeholder="e.g. /images/hero_robotics.png">
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="blogSummary">Brief Summary *</label>
+                            <textarea id="blogSummary" class="form-control" style="height: 80px;" placeholder="Brief summary displayed on listings page cards" required></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="blogContent">Article Content (HTML formatting allowed) *</label>
+                            <textarea id="blogContent" class="form-control" style="height: 300px; font-family: monospace;" placeholder="Use HTML tags like <p>, <h3>, <ul>, <li> to format" required></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width" style="margin-top: 1rem;">
+                            <button type="submit" class="btn btn-primary" style="width: 250px;">Publish Article</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="blogMessage" class="form-message"></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Admin dashboard specific JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check auth state on load
+            fetch('/api/admin/check-auth')
+                .then(res => {
+                    if (res.status === 200) {
+                        showDashboard();
+                    } else {
+                        showLogin();
+                    }
+                })
+                .catch(() => showLogin());
+
+            // Handle Login Form Submission
+            const loginForm = document.getElementById('adminLoginForm');
+            const loginMessage = document.getElementById('loginMessage');
+            
+            if (loginForm) {
+                loginForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    
+                    const credentials = {
+                        username: document.getElementById('username').value.trim(),
+                        password: document.getElementById('password').value
+                    };
+                    
+                    loginMessage.className = 'form-message';
+                    loginMessage.style.display = 'none';
+                    
+                    try {
+                        const res = await fetch('/api/admin/login', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(credentials)
+                        });
+                        
+                        const result = await res.json();
+                        if (res.status === 200) {
+                            showDashboard();
+                            loginForm.reset();
+                        } else {
+                            loginMessage.textContent = result.message || "Invalid credentials.";
+                            loginMessage.classList.add('error');
+                        }
+                    } catch (err) {
+                        loginMessage.textContent = "Server connection error.";
+                        loginMessage.classList.add('error');
+                    }
+                });
+            }
+
+            // Handle Logout Button
+            const logoutBtn = document.getElementById('adminLogoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', async () => {
+                    await fetch('/api/admin/logout', { method: 'POST' });
+                    showLogin();
+                });
+            }
+
+            // Handle Blog Post Submission
+            const blogForm = document.getElementById('adminBlogForm');
+            const blogMessage = document.getElementById('blogMessage');
+            if (blogForm) {
+                blogForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    
+                    const blogData = {
+                        title: document.getElementById('blogTitle').value.trim(),
+                        category: document.getElementById('blogCategory').value,
+                        imageUrl: document.getElementById('blogImage').value.trim() || undefined,
+                        summary: document.getElementById('blogSummary').value.trim(),
+                        content: document.getElementById('blogContent').value.trim()
+                    };
+                    
+                    blogMessage.className = 'form-message';
+                    blogMessage.style.display = 'none';
+                    
+                    try {
+                        const res = await fetch('/api/admin/blog', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(blogData)
+                        });
+                        
+                        const result = await res.json();
+                        if (res.status === 200) {
+                            blogMessage.textContent = result.message;
+                            blogMessage.classList.add('success');
+                            blogForm.reset();
+                        } else {
+                            blogMessage.textContent = result.message || "Failed to publish blog post.";
+                            blogMessage.classList.add('error');
+                        }
+                    } catch (err) {
+                        blogMessage.textContent = "Server communication error.";
+                        blogMessage.classList.add('error');
+                    }
+                });
+            }
+        });
+
+        function showLogin() {
+            document.getElementById('login-panel').style.display = 'block';
+            document.getElementById('dashboard-panel').style.display = 'none';
+        }
+
+        function showDashboard() {
+            document.getElementById('login-panel').style.display = 'none';
+            document.getElementById('dashboard-panel').style.display = 'block';
+            loadLeads('all');
+        }
+
+        // Fetch leads from database
+        async function loadLeads(status = 'all', filterBtn = null) {
+            if (filterBtn) {
+                const parent = filterBtn.parentElement;
+                parent.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                filterBtn.classList.add('active');
+            }
+            
+            const tbody = document.getElementById('leads-table-body');
+            tbody.innerHTML = `<tr><td colspan="7" style="text-align: center;"><i class="fa-solid fa-spinner fa-spin" style="font-size: 1.5rem; color: var(--secondary);"></i> Loading records...</td></tr>`;
+            
+            try {
+                let url = '/api/admin/leads';
+                if (status !== 'all') {
+                    url += `?status=${status}`;
+                }
+                
+                const res = await fetch(url);
+                const result = await res.json();
+                
+                if (result.success) {
+                    document.getElementById('leads-count').textContent = result.leads.length;
+                    
+                    if (result.leads.length === 0) {
+                        tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; color: var(--text-muted); padding: 2rem 0;">No admissions inquiries found matching filter.</td></tr>`;
+                        return;
+                    }
+                    
+                    tbody.innerHTML = '';
+                    result.leads.forEach(lead => {
+                        const tr = document.createElement('tr');
+                        const date = new Date(lead.created_at).toLocaleDateString('en-IN', {
+                            year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
+                        });
+                        
+                        // Status styling helper class
+                        let statusClass = 'status-new';
+                        if (lead.status === 'Contacted') statusClass = 'status-contacted';
+                        else if (lead.status === 'Enrolled') statusClass = 'status-enrolled';
+                        else if (lead.status === 'Archived') statusClass = 'status-archived';
+                        
+                        tr.innerHTML = `
+                            <td><strong>${date}</strong></td>
+                            <td>
+                                <span style="font-size:1.05rem; font-weight:600; color:var(--primary);">${lead.student_name}</span><br>
+                                <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-school"></i> ${lead.school_college}</span>
+                            </td>
+                            <td>
+                                <strong>${lead.parent_name}</strong><br>
+                                <span style="font-size:0.85rem;"><i class="fa-solid fa-phone"></i> ${lead.mobile_number}</span><br>
+                                <span style="font-size:0.85rem;"><i class="fa-solid fa-envelope"></i> ${lead.email}</span>
+                            </td>
+                            <td><span style="background-color:var(--bg-light); padding:0.25rem 0.6rem; border-radius:50px; font-weight:bold;">${lead.age}</span></td>
+                            <td><span style="font-weight:600; color:var(--secondary);">${lead.interested_program}</span></td>
+                            <td><span style="font-size:0.85rem; color:var(--text-muted);">${lead.preferred_batch}</span></td>
+                            <td>
+                                <select onchange="updateLeadStatus(${lead.id}, this.value)" class="status-select ${statusClass}">
+                                    <option value="New" ${lead.status === 'New' ? 'selected' : ''}>New</option>
+                                    <option value="Contacted" ${lead.status === 'Contacted' ? 'selected' : ''}>Contacted</option>
+                                    <option value="Enrolled" ${lead.status === 'Enrolled' ? 'selected' : ''}>Enrolled</option>
+                                    <option value="Archived" ${lead.status === 'Archived' ? 'selected' : ''}>Archived</option>
+                                </select>
+                            </td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                }
+            } catch (err) {
+                tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; color: red;">Failed to retrieve records from database.</td></tr>`;
+            }
+        }
+
+        // Update lead status
+        async function updateLeadStatus(leadId, status) {
+            try {
+                const res = await fetch('/api/admin/leads/status', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ leadId, status })
+                });
+                
+                const result = await res.json();
+                if (result.success) {
+                    // Refresh table display class status indicators
+                    const activeFilter = document.querySelector('.admin-leads-filters .filter-btn.active');
+                    const currentFilterText = activeFilter ? activeFilter.textContent.trim() : 'All Leads';
+                    
+                    let filterName = 'all';
+                    if (currentFilterText === 'New') filterName = 'New';
+                    else if (currentFilterText === 'Contacted') filterName = 'Contacted';
+                    else if (currentFilterText === 'Enrolled') filterName = 'Enrolled';
+                    else if (currentFilterText === 'Archived') filterName = 'Archived';
+                    
+                    loadLeads(filterName);
+                } else {
+                    alert(result.message || "Failed to update status.");
+                }
+            } catch (err) {
+                alert("Communication error updating status.");
+            }
+        }
+
+        // Tab switches (Leads list vs Write blog post)
+        function switchAdminTab(tabId) {
+            document.querySelectorAll('.admin-tab-content').forEach(tab => {
+                tab.style.display = 'none';
+            });
+            
+            document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            document.getElementById(tabId).style.display = 'block';
+            
+            if (tabId === 'leads-tab') {
+                document.getElementById('btn-leads-tab').classList.add('active');
+            } else if (tabId === 'blog-tab') {
+                document.getElementById('btn-blog-tab').classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

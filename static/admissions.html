@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for admissions at Tiny Titans Tech Academy. Register for school programs (Robotics, AI, Coding) or professional college tracks. Secure your seat today.">
+    <meta name="keywords" content="Robotics training admissions, coding academy application, AI classes registry, Tiny Titans Tech Academy enroll, learn Python, Power BI, Data Science courses Tamil Nadu">
+    <title>Online Admissions & Enrollment | Tiny Titans Tech Academy</title>
+    
+    <link rel="icon" type="image/png" href="/images/shield_logo.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header scrolled" id="header" style="position: sticky;">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="logo-link">
+                    <img src="/images/shield_logo.png" alt="Tiny Titans Logo" class="logo-img">
+                    <div class="logo-text">
+                        TINY TITANS
+                        <span>TECH ACADEMY</span>
+                    </div>
+                </a>
+                
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/about.html">About Us</a></li>
+                    <li class="nav-item"><a href="/#programs">Programs</a></li>
+                    <li class="nav-item"><a href="/gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a href="/blog.html">Blog</a></li>
+                    <li class="nav-item"><a href="/contact.html">Contact</a></li>
+                    <li class="nav-item active"><a href="/admissions.html" class="btn btn-primary" style="padding: 0.5rem 1.25rem; color: white;">Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admissions Section -->
+    <section class="section" style="background-color: var(--bg-light); min-height: 80vh;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Admissions Application Portal</h2>
+                <p>Start your learning journey. Complete the quick form below to claim your launching discount or book your track.</p>
+            </div>
+            
+            <div class="admissions-wrapper">
+                <!-- Admissions steps/info -->
+                <div class="admissions-text">
+                    <h3>Enrollment Process</h3>
+                    <p>Enrolling at Tiny Titans Tech Academy is simple. Our coordinators guide you through our pathways to ensure optimal placement.</p>
+                    
+                    <ul class="admissions-steps">
+                        <li class="admissions-step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-details">
+                                <h4>Submit Query Form</h4>
+                                <p>Fill in student particulars, age, school/college details, and chosen technical program.</p>
+                            </div>
+                        </li>
+                        <li class="admissions-step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-details">
+                                <h4>Counselor Call</h4>
+                                <p>Our program coordinators will reach out within 24 hours to schedule a free demo and align batch slots.</p>
+                            </div>
+                        </li>
+                        <li class="admissions-step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-details">
+                                <h4>Batch Allocation & Kit Handover</h4>
+                                <p>Confirm batch timings (weekday/weekend) and collect student kits/textbooks at our Veppampattu center.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div style="background-color: var(--bg-white); border-left: 4px solid var(--highlight); padding: 1.5rem; border-radius: var(--radius-sm); margin-top: 3rem; box-shadow: var(--shadow-sm);">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-gift" style="color: var(--highlight);"></i> Special Launch Offer</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">First 20 school admissions get the discounted monthly fee of <strong>₹1,500/month</strong> instead of ₹1,700/month. Enroll today to secure your launch slot!</p>
+                    </div>
+                </div>
+                
+                <!-- Admissions Form -->
+                <div class="admissions-card">
+                    <h3 style="margin-bottom: 1.5rem; text-align: center; border-bottom: 1px solid var(--border); padding-bottom: 1rem;"><i class="fa-solid fa-file-signature" style="color: var(--secondary); margin-right: 0.5rem;"></i> Admission Form</h3>
+                    <form id="admissionsForm">
+                        <div class="form-grid">
+                            <!-- Student Name -->
+                            <div class="form-group">
+                                <label for="studentName">Student Name *</label>
+                                <input type="text" id="studentName" class="form-control" placeholder="Enter student's full name" required>
+                            </div>
+                            
+                            <!-- Parent Name -->
+                            <div class="form-group">
+                                <label for="parentName">Parent Name *</label>
+                                <input type="text" id="parentName" class="form-control" placeholder="Enter parent's full name" required>
+                            </div>
+                            
+                            <!-- Mobile Number -->
+                            <div class="form-group">
+                                <label for="mobileNumber">Mobile Number *</label>
+                                <input type="tel" id="mobileNumber" class="form-control" placeholder="e.g. 9876543210" required>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" class="form-control" placeholder="e.g. name@email.com" required>
+                            </div>
+                            
+                            <!-- Age -->
+                            <div class="form-group">
+                                <label for="age">Age *</label>
+                                <input type="number" id="age" class="form-control" placeholder="Student's age" min="5" max="30" required>
+                            </div>
+                            
+                            <!-- School/College -->
+                            <div class="form-group">
+                                <label for="schoolCollege">School / College Name *</label>
+                                <input type="text" id="schoolCollege" class="form-control" placeholder="Enter institution name" required>
+                            </div>
+                            
+                            <!-- Program Selection -->
+                            <div class="form-group">
+                                <label for="interestedProgram">Interested Program *</label>
+                                <select id="interestedProgram" class="form-control" required>
+                                    <option value="" disabled selected>Select Program</option>
+                                    <optgroup label="School Kids Programs (Age 6+)">
+                                        <option value="Tiny Cadets (Age 6-9)">Tiny Cadets (Age 6-9)</option>
+                                        <option value="Titan Navigators (Age 9-12)">Titan Navigators (Age 9-12)</option>
+                                        <option value="Tiny Commanders (Age 12+)">Tiny Commanders (Age 12+)</option>
+                                    </optgroup>
+                                    <optgroup label="College Programs & Professionals">
+                                        <option value="Python Programming">Python Programming (₹6,000)</option>
+                                        <option value="Data Analytics & Power BI">Data Analytics & Power BI (₹8,000)</option>
+                                        <option value="Machine Learning">Machine Learning (₹10,000)</option>
+                                        <option value="Data Science Professional">Data Science Professional Program (₹12,000)</option>
+                                        <option value="Generative AI Professional">Generative AI Professional Program (₹14,000)</option>
+                                        <option value="AI & Data Science Career Program">AI & Data Science Career Program (₹20,000)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            
+                            <!-- Batch Preference -->
+                            <div class="form-group">
+                                <label for="preferredBatch">Preferred Batch *</label>
+                                <select id="preferredBatch" class="form-control" required>
+                                    <option value="" disabled selected>Select Preferred Timing</option>
+                                    <option value="Weekend (Saturday & Sunday)">Weekend (Saturday & Sunday)</option>
+                                    <option value="Weekday Evenings (Mon, Wed, Fri)">Weekday Evenings (Mon, Wed, Fri)</option>
+                                    <option value="Weekday Evenings (Tue, Thu, Sat)">Weekday Evenings (Tue, Thu, Sat)</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <div class="form-group full-width" style="margin-top: 1rem;">
+                                <button type="submit" class="btn btn-primary" style="width: 100%; height: 50px;">Apply Now</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Form submission response message banner -->
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Tiny Titans Tech Academy</h3>
+                    <p class="tagline">Learn Today. Lead Tomorrow.</p>
+                    <p class="desc">A premier Future Skills center teaching Robotics, Coding, AI, and Analytics. Preparing Tamil Nadu's students for a technological future.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/#programs">Programs & Fees</a></li>
+                        <li><a href="/gallery.html">Activities Gallery</a></li>
+                        <li><a href="/blog.html">Academy Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="/#programs">Tiny Cadets (Age 6-9)</a></li>
+                        <li><a href="/#programs">Titan Navigators (9-12)</a></li>
+                        <li><a href="/#programs">Power BI & Data Analytics</a></li>
+                        <li><a href="/#programs">Data Science & Machine Learning</a></li>
+                        <li><a href="/#programs">Generative AI Track</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            H-Square Shopping Complex, 1/111,<br>
+                            Chennai–Tiruvallur High Road,<br>
+                            Veppampattu, Tamil Nadu – 602025
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>7010439447</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>info@tinytitans.in</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tiny Titans Tech Academy. All Rights Reserved.</p>
+                <p>Robotics | AI | Coding | Innovation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <div class="whatsapp-widget">
+        <a href="https://wa.me/917010439447?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20Tiny%20Titans%20Tech%20Academy." class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

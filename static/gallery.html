@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View the Tiny Titans Tech Academy gallery. Explore student robotics projects, coding classes, AI workshops, hands-on learning labs, and technology events in Veppampattu, Tamil Nadu.">
+    <meta name="keywords" content="Robotics Classes in Veppampattu, coding activities, AI workshops, Student Robotics projects, STEM school photos, Tiny Titans Tech Academy gallery">
+    <title>Academy Activities Gallery | Tiny Titans Tech Academy</title>
+    
+    <link rel="icon" type="image/png" href="/images/shield_logo.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header scrolled" id="header" style="position: sticky;">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="logo-link">
+                    <img src="/images/shield_logo.png" alt="Tiny Titans Logo" class="logo-img">
+                    <div class="logo-text">
+                        TINY TITANS
+                        <span>TECH ACADEMY</span>
+                    </div>
+                </a>
+                
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/about.html">About Us</a></li>
+                    <li class="nav-item"><a href="/#programs">Programs</a></li>
+                    <li class="nav-item active"><a href="/gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a href="/blog.html">Blog</a></li>
+                    <li class="nav-item"><a href="/contact.html">Contact</a></li>
+                    <li class="nav-item"><a href="/admissions.html" class="btn btn-primary" style="padding: 0.5rem 1.25rem; color: white;">Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Academy Activities Gallery</h2>
+                <p>Take a look inside our high-tech labs and see our Titans engineering the future.</p>
+            </div>
+            
+            <!-- Category Filters -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="robotics">Robotics Kits</button>
+                <button class="filter-btn" data-filter="coding">Coding Sessions</button>
+                <button class="filter-btn" data-filter="ai">AI Workshops</button>
+                <button class="filter-btn" data-filter="events">Academy Events</button>
+            </div>
+            
+            <!-- Image Grid -->
+            <div class="gallery-grid">
+                <!-- Item 1: Robotics -->
+                <div class="gallery-item" data-category="robotics">
+                    <img src="/images/gallery_robotics.png" alt="Students building sensory robots">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Robotics Assembly Kit</h4>
+                            <p>Robotics Kits</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2: Coding -->
+                <div class="gallery-item" data-category="coding">
+                    <img src="/images/gallery_coding.png" alt="Student programming in python">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Python Coding Session</h4>
+                            <p>Coding Sessions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3: AI -->
+                <div class="gallery-item" data-category="ai">
+                    <img src="/images/gallery_ai.png" alt="Machine Learning workshop projection">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Neural Networks Workshop</h4>
+                            <p>AI Workshops</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4: Robotics activities -->
+                <div class="gallery-item" data-category="robotics">
+                    <img src="/images/gallery_student_activities.png" alt="Collaborative STEM robot testing">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Student Hardware Testing</h4>
+                            <p>Student Activities</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 5: Innovation Coding -->
+                <div class="gallery-item" data-category="coding">
+                    <img src="/images/gallery_innovation.png" alt="Student working on GitHub portfolios">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Portfolio Innovation Lab</h4>
+                            <p>Innovation Projects</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 6: Events -->
+                <div class="gallery-item" data-category="events">
+                    <img src="/images/gallery_events.png" alt="Academy hackathon award ceremony">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Annual STEM Hackathon</h4>
+                            <p>Academy Events</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Tiny Titans Tech Academy</h3>
+                    <p class="tagline">Learn Today. Lead Tomorrow.</p>
+                    <p class="desc">A premier Future Skills center teaching Robotics, Coding, AI, and Analytics. Preparing Tamil Nadu's students for a technological future.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/#programs">Programs & Fees</a></li>
+                        <li><a href="/gallery.html">Activities Gallery</a></li>
+                        <li><a href="/blog.html">Academy Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="/#programs">Tiny Cadets (Age 6-9)</a></li>
+                        <li><a href="/#programs">Titan Navigators (9-12)</a></li>
+                        <li><a href="/#programs">Power BI & Data Analytics</a></li>
+                        <li><a href="/#programs">Data Science & Machine Learning</a></li>
+                        <li><a href="/#programs">Generative AI Track</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            H-Square Shopping Complex, 1/111,<br>
+                            Chennai–Tiruvallur High Road,<br>
+                            Veppampattu, Tamil Nadu – 602025
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>7010439447</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>info@tinytitans.in</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tiny Titans Tech Academy. All Rights Reserved.</p>
+                <p>Robotics | AI | Coding | Innovation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <div class="whatsapp-widget">
+        <a href="https://wa.me/917010439447?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20Tiny%20Titans%20Tech%20Academy." class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

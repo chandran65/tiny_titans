@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tiny Titans Tech Academy is Veppampattu's leading future skills center. We teach kids and college students Robotics, Artificial Intelligence (AI), Coding, Data Science, Python, Generative AI, and Machine Learning. Small batch sizes with hands-on projects.">
+    <meta name="keywords" content="Robotics Classes in Veppampattu, AI Classes in Veppampattu, Coding Classes Near Me, Robotics Training for Kids, AI Training for Students, Data Science Training in Veppampattu, Generative AI Training, Tiny Titans Tech Academy, STEM Classes, Python Programming">
+    <meta name="author" content="Tiny Titans Tech Academy">
+    <title>Tiny Titans Tech Academy | Robotics, AI & Coding in Veppampattu</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/shield_logo.png">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="logo-link" id="logoLink">
+                    <img src="/images/shield_logo.png" alt="Tiny Titans Logo" class="logo-img" id="logoImg">
+                    <div class="logo-text" id="logoText">
+                        TINY TITANS
+                        <span>TECH ACADEMY</span>
+                    </div>
+                </a>
+                
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item active"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/about.html">About Us</a></li>
+                    <li class="nav-item"><a href="#programs">Programs</a></li>
+                    <li class="nav-item"><a href="/gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a href="/blog.html">Blog</a></li>
+                    <li class="nav-item"><a href="/contact.html">Contact</a></li>
+                    <li class="nav-item"><a href="/admissions.html" class="btn btn-primary" style="padding: 0.5rem 1.25rem; color: white;">Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-tagline">வணக்கம்! (Vanakkam!) • Learn Today. Lead Tomorrow.</span>
+                    <h1 id="heroTitle">Tiny Titans Tech Academy</h1>
+                    <p class="hero-desc" id="heroDesc">
+                        Empowering students with Robotics, Artificial Intelligence, Coding, Data Science and Future Skills. We bridge the gap between traditional learning and industry requirements.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#programs" class="btn btn-primary" onclick="setTimeout(() => document.getElementById('school-tab-btn').click(), 100);">Explore Kids Programs</a>
+                        <a href="#programs" class="btn btn-secondary" onclick="setTimeout(() => document.getElementById('college-tab-btn').click(), 100);">Explore College Programs</a>
+                        <a href="/contact.html" class="btn btn-outline">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-img-container">
+                        <img src="/images/hero_robotics.png" alt="Students building robotics kits in Tiny Titans Lab" class="hero-img" id="heroImg">
+                    </div>
+                    <!-- Floating Tech Cards -->
+                    <div class="hero-floating-card hero-fc-1">
+                        <div class="hero-fc-icon"><i class="fa-solid fa-robot"></i></div>
+                        <div class="hero-fc-text">
+                            <h4>Robotics Lab</h4>
+                            <p>Hands-on hardware</p>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card hero-fc-2">
+                        <div class="hero-fc-icon"><i class="fa-solid fa-brain"></i></div>
+                        <div class="hero-fc-text">
+                            <h4>AI & Coding</h4>
+                            <p>Machine Learning tracks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-info" id="aboutInfo">
+                    <h3>Empowering the Next Generation of Technologists</h3>
+                    <p>
+                        Tiny Titans Tech Academy is a premier Future Skills Learning Center located in Veppampattu, Tamil Nadu. We are dedicated to preparing students to excel in tomorrow's technology-driven world.
+                    </p>
+                    <p>
+                        Through experiential learning, physical computing kits, and industry-aligned computer platforms, we make complex modern technologies easy to learn, fun, and highly practical.
+                    </p>
+                    
+                    <!-- Thirukkural Quote on Education -->
+                    <div style="background-color: var(--bg-white); border-left: 4px solid var(--secondary); padding: 1.25rem 1.5rem; border-radius: var(--radius-sm); margin: 2rem 0; box-shadow: var(--shadow-sm); font-style: italic;">
+                        <p style="color: var(--primary); font-weight: 700; font-family: var(--font-heading); margin-bottom: 0.5rem; font-size: 1.15rem; line-height: 1.4;">
+                            "கற்க கசடறக் கற்பவை கற்றபின்<br>நிற்க அதற்குத் தக."
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                            “Learn flawlessly what is to be learned, and having learned, conduct yourself accordingly.” <br><strong>— Thirukkural (Kural 391)</strong>
+                        </p>
+                    </div>
+                    
+                    <div class="about-image-wrapper">
+                        <img src="/images/about_academy.png" alt="Tiny Titans Coding and Robotics Lab" class="about-img">
+                    </div>
+                    
+                    <h4 style="margin-top: 2rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">Our Core Focus Areas:</h4>
+                    <div class="focus-tags">
+                        <span class="focus-tag">Robotics</span>
+                        <span class="focus-tag">Artificial Intelligence</span>
+                        <span class="focus-tag">Coding</span>
+                        <span class="focus-tag">Machine Learning</span>
+                        <span class="focus-tag">Data Science</span>
+                        <span class="focus-tag">Generative AI</span>
+                        <span class="focus-tag">Innovation</span>
+                    </div>
+                </div>
+                
+                <div class="features-grid" id="featuresGrid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-people-group"></i></div>
+                        <h4>Small Batch Sizes</h4>
+                        <p>Maximum of 12 students per batch ensuring focused and quality mentorship.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-user-gear"></i></div>
+                        <h4>Personalized Learning</h4>
+                        <p>Tailored guidance designed around each student's pace and personal curiosity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-cubes"></i></div>
+                        <h4>Hands-on Projects</h4>
+                        <p>Learn by constructing real physical assemblies and coding functional solutions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h4>Industry Mentors</h4>
+                        <p>Classes facilitated by experienced developers and technology subject experts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Tab Section -->
+    <section class="programs-tabs section" id="programs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Future Skills Programs</h2>
+                <p>Select your category to browse the curated courses and structured pathways we offer.</p>
+            </div>
+            
+            <div class="tabs-nav">
+                <button class="tab-btn active" id="school-tab-btn" data-tab="school-tab">
+                    <i class="fa-solid fa-child"></i> School Students (Age 6+)
+                </button>
+                <button class="tab-btn" id="college-tab-btn" data-tab="college-tab">
+                    <i class="fa-solid fa-user-graduate"></i> College & Professionals
+                </button>
+            </div>
+            
+            <!-- Tab 1: School Students -->
+            <div class="tab-content active" id="school-tab">
+                <!-- Kids Banner -->
+                <div class="kids-division-banner">
+                    <div class="kids-logo-container">
+                        <img src="/images/logo.jpeg" alt="Tiny Titans Kids Division Logo" class="kids-logo">
+                    </div>
+                    <div class="kids-banner-text">
+                        <h3>Future Skills Learning Programs</h3>
+                        <p>Ignite logic, creative thinking, and robotics design from an early age. We use interactive visual coding environments, physical microcontrollers, and sensory robot modules.</p>
+                    </div>
+                </div>
+                
+                <!-- Kids Program Grid -->
+                <div class="kids-programs-grid">
+                    <!-- Cadets -->
+                    <div class="kids-card cadet">
+                        <span class="age-badge">Age 6–9</span>
+                        <h5>Division 1</h5>
+                        <h4>Tiny Cadets</h4>
+                        <hr style="border: none; border-top: 1px solid var(--border); margin: 1rem 0;">
+                        <ul class="focus-list">
+                            <li>Robotics Basics</li>
+                            <li>STEM Activities</li>
+                            <li>Logical Thinking</li>
+                            <li>Creative Learning</li>
+                            <li>Problem Solving</li>
+                        </ul>
+                        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px dashed var(--border); padding-top: 0.75rem;">
+                            <strong>Kits & Tools:</strong> Scratch Jr, LEGO Education Wedo, STEM Engineering Blocks.
+                        </div>
+                    </div>
+                    
+                    <!-- Navigators -->
+                    <div class="kids-card navigator">
+                        <span class="age-badge">Age 9–12</span>
+                        <h5>Division 2</h5>
+                        <h4>Titan Navigators</h4>
+                        <hr style="border: none; border-top: 1px solid var(--border); margin: 1rem 0;">
+                        <ul class="focus-list">
+                            <li>Coding Fundamentals</li>
+                            <li>Robotics Projects</li>
+                            <li>AI Basics</li>
+                            <li>Critical Thinking</li>
+                            <li>Innovation Activities</li>
+                        </ul>
+                        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px dashed var(--border); padding-top: 0.75rem;">
+                            <strong>Kits & Tools:</strong> Arduino UNO, mBlock Visual Suite, Tinkercad, Sensors & Actuators.
+                        </div>
+                    </div>
+                    
+                    <!-- Commanders -->
+                    <div class="kids-card commander">
+                        <span class="age-badge">Age 12+</span>
+                        <h5>Division 3</h5>
+                        <h4>Tiny Commanders</h4>
+                        <hr style="border: none; border-top: 1px solid var(--border); margin: 1rem 0;">
+                        <ul class="focus-list">
+                            <li>Advanced Robotics</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Machine Learning Basics</li>
+                            <li>Leadership Skills</li>
+                            <li>Real World Projects</li>
+                        </ul>
+                        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px dashed var(--border); padding-top: 0.75rem;">
+                            <strong>Kits & Tools:</strong> Raspberry Pi 4, Python, Arduino IDE, Actuators & Motor Shields, Git.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Why Parents Choose Us -->
+                <div class="why-parents">
+                    <h3>Why Parents Choose Tiny Titans</h3>
+                    <div class="why-parents-grid">
+                        <div class="why-card">
+                            <div class="why-card-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                            <h4>Max 12 Students</h4>
+                            <p>Highly restricted batch limits ensures your child receives undivided guidance and care.</p>
+                        </div>
+                        <div class="why-card">
+                            <div class="why-card-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                            <h4>Flexible Batches</h4>
+                            <p>Convenient weekend and weekday timings structured to balance regular school routines.</p>
+                        </div>
+                        <div class="why-card">
+                            <div class="why-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h4>Safe Environment</h4>
+                            <p>A secure, stimulating learning space designed for hardware collaboration and play.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- School Fees -->
+                <div class="school-fees">
+                    <h3>School Programs Fees</h3>
+                    <p>Invest in your child's futuristic mindset. Check our special launching rates below.</p>
+                    <div class="fees-container">
+                        <div class="fee-card highlighted">
+                            <div class="fee-ribbon">Best Value</div>
+                            <h4>Special Launch Offer</h4>
+                            <div class="fee-amount">₹1500<span>/month</span></div>
+                            <p class="fee-note">Applicable for the first 20 admissions only</p>
+                            <a href="/admissions.html" class="btn btn-accent" style="width: 100%;">Claim Offer Now</a>
+                        </div>
+                        <div class="fee-card">
+                            <h4>Regular Admission Fee</h4>
+                            <div class="fee-amount">₹1700<span>/month</span></div>
+                            <p class="fee-note">Standard monthly subscription package</p>
+                            <a href="/admissions.html" class="btn btn-outline" style="width: 100%;">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab 2: College Students - Professional Corporate Design -->
+            <div class="tab-content" id="college-tab">
+                <div class="corporate-tab">
+                    <div class="corporate-header">
+                        <span class="corporate-subtitle">Career Acceleration Hub</span>
+                        <h3>Future Skills & Career Acceleration Center</h3>
+                        <p style="color: var(--text-muted); max-width: 700px; margin: 1rem auto 0 auto;">
+                            Equip yourself with the exact coding tools, analytical frameworks, and AI workflows that modern tech conglomerates require. Work on live enterprise datasets.
+                        </p>
+                    </div>
+                    
+                    <!-- College Grid -->
+                    <div class="college-programs-grid">
+                        <!-- Python -->
+                        <div class="college-card">
+                            <div class="college-card-top">
+                                <h4>Python Programming</h4>
+                                <p>Learn foundational syntax, data structures, scripting, file systems, and API automation. Ideal starting point.</p>
+                                <ul class="focus-list" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+                                    <li>Basic Syntax & Control Flow</li>
+                                    <li>Data Structures & Collections</li>
+                                    <li>Modules, File I/O & Exceptions</li>
+                                    <li>REST API Integrations</li>
+                                </ul>
+                            </div>
+                            <div class="college-fee">₹6,000</div>
+                        </div>
+                        
+                        <!-- Data Analytics -->
+                        <div class="college-card">
+                            <div class="college-card-top">
+                                <h4>Data Analytics & Power BI</h4>
+                                <p>Master relational databases, SQL queries, DAX styling, ETL cleaning, and design interactive corporate reports.</p>
+                                <ul class="focus-list" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+                                    <li>SQL Queries & Database Management</li>
+                                    <li>Power Query Data Preparation</li>
+                                    <li>DAX Formulas & Measures</li>
+                                    <li>Interactive Dashboard Design</li>
+                                </ul>
+                            </div>
+                            <div class="college-fee">₹8,000</div>
+                        </div>
+                        
+                        <!-- ML -->
+                        <div class="college-card">
+                            <div class="college-card-top">
+                                <h4>Machine Learning</h4>
+                                <p>Understand training schemas, feature modeling, regression, neural classification, and model scoring.</p>
+                                <ul class="focus-list" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+                                    <li>Supervised & Unsupervised Models</li>
+                                    <li>Regression & Classification Algorithms</li>
+                                    <li>Scikit-Learn Model Training</li>
+                                    <li>Model Scoring & Validation</li>
+                                </ul>
+                            </div>
+                            <div class="college-fee">₹10,000</div>
+                        </div>
+                        
+                        <!-- Data Science -->
+                        <div class="college-card">
+                            <div class="college-card-top">
+                                <h4>Data Science Professional Program</h4>
+                                <p>Combine Python programming, SQL databases, statistical logic, and ML pipeline deployment in one track.</p>
+                                <ul class="focus-list" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+                                    <li>Python, SQL & Power BI</li>
+                                    <li>Statistics & Data Visualization</li>
+                                    <li>Machine Learning Pipeline Setup</li>
+                                    <li>End-to-End Analytics Projects</li>
+                                </ul>
+                            </div>
+                            <div class="college-fee">₹12,000</div>
+                        </div>
+                        
+                        <!-- Gen AI -->
+                        <div class="college-card">
+                            <div class="college-card-top">
+                                <h4>Generative AI Professional Program</h4>
+                                <p>Build AI applications, prompt templates, vector memory, LLM API setups, and custom intelligent RAG agents.</p>
+                                <ul class="focus-list" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+                                    <li>Prompt Engineering Fundamentals</li>
+                                    <li>LLM API Integrations</li>
+                                    <li>Vector DBs & RAG Architectures</li>
+                                    <li>Custom Smart Agent Development</li>
+                                </ul>
+                            </div>
+                            <div class="college-fee">₹14,000</div>
+                        </div>
+                        
+                        <!-- Integrated Program -->
+                        <div class="college-card" style="border: 2px solid var(--secondary); background: rgba(30,136,229,0.04);">
+                            <div class="college-card-top">
+                                <h4 style="color: var(--primary);">AI & Data Science Career Program</h4>
+                                <p>Our flagship, end-to-end curriculum encompassing Python, SQL, Power BI, ML, and Generative AI with internship support.</p>
+                                <ul class="focus-list" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+                                    <li>Full Stack Data Science Tracks</li>
+                                    <li>Generative AI Agent Deployments</li>
+                                    <li>Portfolio Reviews & GitHub Setup</li>
+                                    <li>Resume Building & Placement Assistance</li>
+                                </ul>
+                            </div>
+                            <div class="college-fee" style="color: var(--highlight);">₹20,000</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Industry Domains -->
+                    <div class="domains-section">
+                        <h4>Strategic Corporate Domains Targeted</h4>
+                        <div class="domains-grid">
+                            <div class="domain-card">
+                                <div class="domain-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <h5>Retail Analytics</h5>
+                            </div>
+                            <div class="domain-card">
+                                <div class="domain-icon"><i class="fa-solid fa-box-open"></i></div>
+                                <h5>Consumer Packaged Goods (CPG)</h5>
+                            </div>
+                            <div class="domain-card">
+                                <div class="domain-icon"><i class="fa-solid fa-pills"></i></div>
+                                <h5>Pharmaceutical Analytics</h5>
+                            </div>
+                            <div class="domain-card">
+                                <div class="domain-icon"><i class="fa-solid fa-dna"></i></div>
+                                <h5>Life Sciences</h5>
+                            </div>
+                            <div class="domain-card">
+                                <div class="domain-icon"><i class="fa-solid fa-building-columns"></i></div>
+                                <h5>Banking & Financial Services</h5>
+                            </div>
+                            <div class="domain-card">
+                                <div class="domain-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                                <h5>Supply Chain & Logistics</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Student Benefits -->
+                    <div class="benefits-section">
+                        <h4>Placement Readiness & Benefits</h4>
+                        <div class="benefits-grid">
+                            <div class="benefit-card">
+                                <div class="benefit-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                                <h5>Industry-Oriented Projects</h5>
+                                <p>Solve actual challenges from retail logs, hospital reports, and logistics metrics.</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon"><i class="fa-solid fa-folder-open"></i></div>
+                                <h5>Portfolio Building</h5>
+                                <p>Compile clean code on GitHub and interactive dashboards to present directly to recruiters.</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                                <h5>Resume & Mock Prep</h5>
+                                <p>Polishing CV layouts and holding one-on-one technical mock interview loops.</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                <h5>Internship Assistance</h5>
+                                <p>Exclusive links to associate roles and entry-level placements with partner startups.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 4rem;">
+                        <a href="/admissions.html" class="btn btn-accent">Apply for College Track</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Community Says</h2>
+                <p>Listen to direct reviews from parents of our school students and alumni from our college tracks.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "The maximum 12 student limit was what convinced me. My 10-year-old son has been attending the Titan Navigators batch. He is now building real Lego robots and understands core coding logic. His critical thinking has improved immensely!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MS</div>
+                        <div class="author-info">
+                            <h5>Meenakshi Sundaram</h5>
+                            <p>Parent of Titan Navigator Student</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "After completing my BCA, I was confused about getting into data roles. Tiny Titans' Data Science Program was pure gold. We didn't just write scripts, we analyzed CPG databases and built dashboards. The portfolio I made helped me clear my analytics interview!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div class="author-info">
+                            <h5>Rajesh Kumar</h5>
+                            <p>Alumni - Data Science Program</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Have questions? We have compiled the answers to the most common queries below.</p>
+            </div>
+            
+            <div class="faq-grid">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <h4>What is the minimum age to enroll in the kids program?</h4>
+                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                    </button>
+                    <div class="faq-body">
+                        <p>Our junior programs start from Age 6 (Tiny Cadets). We use visual, block-based instructions that do not require complex typing, making it easy and fun for early school students to learn logic.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <h4>Are the batch timings flexible?</h4>
+                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                    </button>
+                    <div class="faq-body">
+                        <p>Yes, we operate flexible weekend (Saturday & Sunday) and weekday evening batches. Students can choose a schedule that fits without overlapping with school or college rosters.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <h4>How long are the programs, and are certificates provided?</h4>
+                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                    </button>
+                    <div class="faq-body">
+                        <p>Our school programs run monthly. College tracks range from 4 weeks (Python) to 12 weeks (AI & Data Science Career track). Certified badges are provided at the end of each program upon successful completion of portfolio projects.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <h4>Do I need a prior computer science background for college courses?</h4>
+                        <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                    </button>
+                    <div class="faq-body">
+                        <p>Not at all. Our college programs start from the absolute basics of Python programming. We build up your understanding step-by-step before progressing to advanced machine learning and databases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Tiny Titans Tech Academy</h3>
+                    <p class="tagline">Learn Today. Lead Tomorrow.</p>
+                    <p class="desc">A premier Future Skills center teaching Robotics, Coding, AI, and Analytics. Preparing Tamil Nadu's students for a technological future.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="#programs">Programs & Fees</a></li>
+                        <li><a href="/gallery.html">Activities Gallery</a></li>
+                        <li><a href="/blog.html">Academy Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="#programs" onclick="setTimeout(() => document.getElementById('school-tab-btn').click(), 100);">Tiny Cadets (Age 6-9)</a></li>
+                        <li><a href="#programs" onclick="setTimeout(() => document.getElementById('school-tab-btn').click(), 100);">Titan Navigators (9-12)</a></li>
+                        <li><a href="#programs" onclick="setTimeout(() => document.getElementById('college-tab-btn').click(), 100);">Power BI & Data Analytics</a></li>
+                        <li><a href="#programs" onclick="setTimeout(() => document.getElementById('college-tab-btn').click(), 100);">Data Science & Machine Learning</a></li>
+                        <li><a href="#programs" onclick="setTimeout(() => document.getElementById('college-tab-btn').click(), 100);">Generative AI Track</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            H-Square Shopping Complex, 1/111,<br>
+                            Chennai–Tiruvallur High Road,<br>
+                            Veppampattu, Tamil Nadu – 602025
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>7010439447</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>info@tinytitans.in</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tiny Titans Tech Academy. All Rights Reserved.</p>
+                <p>Robotics | AI | Coding | Innovation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <div class="whatsapp-widget">
+        <a href="https://wa.me/917010439447?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20Tiny%20Titans%20Tech%20Academy." class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+</body>
+</html>
