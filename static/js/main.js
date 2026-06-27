@@ -189,11 +189,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div style="margin-top: 1rem; border-top: 1px solid rgba(46, 125, 50, 0.2); padding-top: 0.75rem; font-size: 0.9rem; line-height: 1.5; text-align: left;">
                             <p style="margin-bottom: 0.5rem; font-weight: bold; color: #1B5E20;"><i class="fa-solid fa-square-check"></i> To secure your seat immediately, you may complete the payment transfer:</p>
                             <ul style="list-style: none; padding-left: 0; margin-bottom: 0.75rem;">
-                                <li>• <strong>UPI ID:</strong> payment@tinytitans (or +91 7010439447)</li>
-                                <li>• <strong>Bank Name:</strong> HDFC Bank</li>
-                                <li>• <strong>Account Name:</strong> Tiny Titans Tech Academy</li>
-                                <li>• <strong>Account Number:</strong> 50200088991122</li>
-                                <li>• <strong>IFSC Code:</strong> HDFC0001234</li>
+                                <li>• <strong>UPI ID:</strong> elakkiyachand05@oksbi</li>
+                                <li>• <strong>Bank Name:</strong> SBI Bank</li>
+                                <li>• <strong>Account Name:</strong> Elakkiya B</li>
+                                <li>• <strong>Account Number:</strong> 31889329181</li>
+                                <li>• <strong>IFSC Code:</strong> SBIN0006463</li>
                             </ul>
                             <p style="font-size: 0.8rem; font-style: italic; color: #33691E;"><i class="fa-solid fa-image"></i> Please send the payment screenshot on WhatsApp (+91 7010439447) with the student's name to confirm registration.</p>
                         </div>
